@@ -17,7 +17,7 @@ class Graph
 //Initializing all values 
 Graph::Graph(int v)
 {
-	this->v=v;
+	this->v=v; 
 	adj= new list<int>[v];
 }
 
