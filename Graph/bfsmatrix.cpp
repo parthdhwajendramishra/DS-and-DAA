@@ -21,8 +21,9 @@ Graph::Graph(int v,int e)
 
 void Graph::input()
 {
+    //Taking a matrix of size v*v
     vector<vector<int>> edges( v , vector<int> (v, 0));
-    int sv;
+    int sv;//source vertex
 
     for(int i=0;i<e;i++)
     {
@@ -39,9 +40,15 @@ void Graph::input()
 
 void Graph::BFS(vector<vector<int>> &edges,int sv)
 {
+    /*Creating an array having all false values
+    to check that which edge is visited*/
     bool visited[v]={false};
+
+    //A queue to push visited vertices
     queue<int> q;
     q.push(sv);
+
+    //Marking visited vertex true
     visited[sv]=true;
 
     while(!q.empty())
@@ -55,10 +62,12 @@ void Graph::BFS(vector<vector<int>> &edges,int sv)
         {
             if(i==front)
               continue;
+            
+            //If vertex is coonected to another vertex and is not visited
             else if(edges[front][i]==1 && visited[i]==false)
             {
-                q.push(i);
-                visited[i]=true;
+                q.push(i);//Push the vertex in queue 
+                visited[i]=true;//Mark it true as visited
             }
         }
     }
@@ -71,6 +80,7 @@ int main()
     cin>>v;
     cout<<"Enter number of Edges:";
     cin>>e;
+
     Graph g(v,e);
     g.input();
 
