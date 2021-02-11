@@ -21,6 +21,11 @@ void Graph::input()
 {
     //Taking a matrix of size v*v having all values zero
     vector<vector<int>> edges(v,vector<int>(v,0));
+
+    /*Creating an vector having all false values
+    to check that which edge is visited*/
+    vector<int> visited(v,0);
+    
     int sv;//source vertex
 
     for(int i=0;i<e;i++)
@@ -31,9 +36,7 @@ void Graph::input()
         edges[s][f]=1;
     }
 
-    /*Creating an vector having all false values
-    to check that which edge is visited*/
-    vector<int> visited(v,0);
+    
     cout<<"Enter the source vertex:";
     cin>>sv;
 

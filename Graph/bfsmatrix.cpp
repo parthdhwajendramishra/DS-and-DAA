@@ -5,8 +5,7 @@ using namespace std;
 
 class Graph
 {
-    int v;
-    int e;
+    int v,e;
     public:
     Graph(int v,int e);
     void BFS(vector<vector<int>> &edges,int sv);
