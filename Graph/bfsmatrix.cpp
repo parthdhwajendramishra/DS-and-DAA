@@ -21,7 +21,7 @@ Graph::Graph(int v,int e)
 
 void Graph::input()
 {
-    //Taking a matrix of size v*v
+    //Taking a matrix of size v*v having all values zero
     vector<vector<int>> edges( v , vector<int> (v, 0));
     int sv;//source vertex
 
