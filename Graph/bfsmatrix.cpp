@@ -5,7 +5,7 @@ using namespace std;
 
 class Graph
 {
-    int v,e;
+    int v,e;//Number of Verices and Edges
     public:
     Graph(int v,int e);
     void BFS(vector<vector<int>> &edges,int sv);
@@ -27,8 +27,7 @@ void Graph::input()
     for(int i=0;i<e;i++)
     {
        int f,s;
-       cin>>f;
-       cin>>s;
+       cin>>f>>s;
        edges[f][s]=1;
        edges[s][f]=1;
     }
